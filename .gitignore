@@ -1,0 +1,50 @@
+# === Python Build ===
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# === VS Code & Environment ===
+.vscode/
+*.env
+.venv/
+.env/
+*.swp
+
+# === Testing & Coverage ===
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# === Streamlit ===
+.streamlit/
+
+# === Jupyter Notebooks ===
+.ipynb_checkpoints/
+
+# === Output & Logs ===
+outputs/*.csv
+outputs/*.md
+outputs/*.png
+outputs/*.json
+outputs/*.log
+outputs/*.xlsx
+
+# === Data Files (Synthetic / Generated) ===
+data/*.csv
+
+# === Docker & Runtime ===
+*.log
+*.pid
+.DS_Store
+*.db
+
+# === System Files ===
+Thumbs.db
+ehthumbs.db
+desktop.ini
