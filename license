@@ -1,0 +1,43 @@
+import os
+from pathlib import Path
+
+# Step 1: Add license
+license_text = """
+MIT License
+
+Copyright (c) 2025 Mrig Debsarma
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+...
+"""
+
+readme_badge_block = """
+## 📛 Badges
+
+[![CI](https://github.com/mnds18/agentic-ts-forecasting-system/actions/workflows/ci_workflow.yaml/badge.svg)](https://github.com/mnds18/agentic-ts-forecasting-system/actions/workflows/ci_workflow.yaml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+"""
+
+# Paths
+license_path = Path("LICENSE")
+readme_path = Path("README.md")
+wiki_path = Path("WIKI.md")
+contribute_path = Path("CONTRIBUTING.md")
+
+# Step 2: Write the files
+license_path.write_text(license_text.strip())
+wiki_path.write_text("# 📚 Project Wiki\n\nThis wiki will cover advanced agent details, architecture and orchestration strategies.\n\n## Contents\n- Agent Roles\n- Data Pipelines\n- Deployment\n")
+contribute_path.write_text("# 🤝 Contribution Guide\n\nThanks for your interest! Please:\n\n1. Fork the repo\n2. Clone and create a new branch\n3. Run tests using `pytest`\n4. Make changes with clear commits\n5. Submit a Pull Request")
+
+# Step 3: Append badge block to README if not already present
+readme_text = readme_path.read_text()
+if "## 📛 Badges" not in readme_text:
+    readme_text = readme_text + "\n\n" + readme_badge_block.strip()
+    readme_path.write_text(readme_text)
+
+"✅ License, badges, wiki, and contribution guide added."
