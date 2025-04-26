@@ -21,6 +21,15 @@ This project showcases a modular, multi-agent GenAI system for time series forec
 
 ---
 
+## 📊 App Screenshots
+![Time Series](demo/time_Series.jpg)
+
+## 📊 Agent Execution Log
+![Agent Execution Log](demo/time_Series_2.jpg)
+
+## 📊 Demo Video
+![Demo Video](demo/Agentic_Forecasting_Dashboard_demo_video.mp4)
+
 ## 💻 Quick Start
 
 ### 1. Clone and Set Up
